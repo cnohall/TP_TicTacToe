@@ -8,18 +8,30 @@ enum Player {
 }
 
 interface IState {
-  board: Player[]
+  board: Player[],
+  nextPlayerTurn: Player
 }
 
 class App extends React.Component<{}, IState> {
   public  state = {
-    board: [Player.None, Player.None, Player.None, Player.None, Player.None, Player.None, Player.None, Player.None, Player.None]
+    board: [Player.None, Player.None, Player.None, Player.None, Player.None, Player.None, Player.None, Player.None, Player.None],
+    nextPlayerTurn: Player.One
   }
   
+  public createOnClickHandler = (index: number) => () => {
+    const { board, nextPlayerTurn } = this.state
 
+    const newBoard = board.slice()
+    newBoard[index] = nextPlayerTurn
+
+    this.setState({ board: newBoard, nextPlayerTurn: 3 - nextPlayerTurn})
+  }
 
   public renderCell = (index: number) => {
-    return <div className="cell"/>
+    const { board } = this.state
+
+
+    return <div className="cell" onClick= {this.createOnClickHandler(index)} data-player = {board[index]}  />
     
   }
 

@@ -27,6 +27,7 @@
   height: 150px;
   margin: auto;
   margin-top: 75px;
+  border: 1px solid black;
 }
 
 .cell {
@@ -34,7 +35,20 @@
   height: 50px;
   display: inline-block;
   font-size: 0;
-  background: blue;
+  background: #00d0ff;
   border: 1px solid black;
   box-sizing: border-box;
+}
+
+.cell:hover {
+  cursor: pointer;
+  background: yellow;
+}
+
+.cell[data-player="1"]{
+  background: purple;
+}
+
+.cell[data-player="2"]{
+  background: brown;
 }
