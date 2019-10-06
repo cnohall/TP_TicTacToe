@@ -1,5 +1,5 @@
 # TP_TicTacToe
-A TypeScript Tic-Tac-Toe with React
+Tic Tac Toe with React and TypeScript
 
-created following this: 
-https://github.com/AlexeiDarmin/youtube_projects
+created following this guide: 
+https://www.youtube.com/watch?v=dTLq6aWnPFM&t=322s
