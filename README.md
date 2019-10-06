@@ -1,4 +1,4 @@
-# TP_TicTacToe
+# Tic Tac Toe
 Tic Tac Toe with React and TypeScript
 
 created following this guide: 
